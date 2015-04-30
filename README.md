@@ -2,29 +2,42 @@
 
 App für Haushaltsplanung. Erstellt mit Meteor (www.meteor.com).
  
-## Funktionalitäten
+## Roadmap
 
-1. Haushalt gründen - wie? Soll es Chef geben? Ich fänds geil, wenn es keinen Chef gibt. Z.b. könnte man private UUID von Haushalt benützen, um Haushalte zu finden (jeder der UUID hat, kann beitreten). 
-2. Ausgaben aufteilen
-3. Postilischte. 
-4. Liste von Grundnahrungsmittel, die im Haushalt benötigt werden. Ist eins aufgebraucht, so kann das im App markiert werden. Das Produkt landet dann direkt in der Postilischte. 
-5. Gemeinsamer Kalender (Wäsche, Abfall, Spengler etc...)
-6. Ämtliplan (ev. Möglichkeit, automatisch Ämtli zu "rotieren")
+### Version 0.1
+
+Einkaufsliste
+ - shared between all users in household
+ - bearbeiten, löschen, abhaacken
+ - sortieren nach 1. priorität abgehaackt, 2. chronologisch
+ - Button "einkauf abgeschlossen" -> weg von liste
+
+
+### Version 0.2
+ - Einkauf history (abgeschlossene Einkäufe)
+ - Vorrat
 
 
 ## Datenbank 
 
  - Users
- 	 - UUID (String)
+ 	 - UUID 
  	 - Email
- 	 - Username (optional?)
+ 	 - Username 
+ 	 - Passwort
 
  - Haushalt
  	 - UUID
- 	 - Name (String)
+ 	 - Name 
  	 - Mitglieder (Array von user UUID's)
- 	 - Postiliste (Array von Strings)
+ 	 - Postiliste (Array von Produkt)
+ 	 	 - Name 
+ 	 	 - Menge 
+ 	 	 - gekauft (true/false)
+ 	 	 - addedAt (Zeitpunkt)
  	 - Ausgaben
+
+ 
 
 ## Contributors
 
@@ -32,4 +45,4 @@ Luc, Schmidi, ...
 
 ## License
 
-(TODO)
+GPL
