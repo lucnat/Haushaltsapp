@@ -14,9 +14,21 @@ App für Haushaltsplanung. Erstellt mit Meteor (www.meteor.com).
 
 ## Datenbank 
 
+ - Users
+ 	 - UUID (String)
+ 	 - Email
+ 	 - Username (optional?)
+
+ - Haushalt
+ 	 - UUID
+ 	 - Name (String)
+ 	 - Mitglieder (Array von user UUID's)
+ 	 - Postiliste (Array von Strings)
+ 	 - Ausgaben
 
 ## Contributors
-...
+
+Luc, Schmidi, ...
 
 ## License
 
