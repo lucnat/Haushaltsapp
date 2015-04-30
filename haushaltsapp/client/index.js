@@ -9,16 +9,3 @@ Template.mainContainer.events({
 		$('#myButton')
 	}
 });
-
-
-
-
-
-function integrator(f, a, b){
-
-}
-
-
-function(x){
-	return 1/2*x^2;
-}

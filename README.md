@@ -11,5 +11,13 @@ App für Haushaltsplanung. Erstellt mit Meteor (www.meteor.com).
 5. Gemeinsamer Kalender (Wäsche, Abfall, Spengler etc...)
 6. Ämtliplan (ev. Möglichkeit, automatisch Ämtli zu "rotieren")
 
+
+## Datenbank 
+
+
 ## Contributors
 ...
+
+## License
+
+(TODO)
