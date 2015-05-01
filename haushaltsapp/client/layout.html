@@ -1,0 +1,28 @@
+
+<head>
+	<title>Haushaltsapp</title>
+</head>
+
+<template name="layout">
+	{{#ionBody}}
+
+		{{> ionNavBar class="bar-dark"}}
+
+		{{#contentFor "headerTitle"}}
+			<h1 class="title">Haushaltsapp</h1>
+		{{/contentFor}}
+
+		{{#contentFor "headerButtonRight"}}
+			<i class="icon icon-clear">{{> loginButtons}}</i>
+		{{/contentFor}}
+
+		{{#ionContent class="padding"}}
+			{{#if currentUser}}
+				{{> yield}}
+			{{else}}
+				{{> account}}
+			{{/if}}
+		{{/ionContent}}
+
+	{{/ionBody}}
+</template>
