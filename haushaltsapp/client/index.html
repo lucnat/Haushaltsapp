@@ -1,0 +1,63 @@
+
+
+<template name="createHousehold">
+	<br>
+	<div style='text-align: center'>
+		<button class="button button-large button-dark" data-ion-modal="_createModal">Erstelle neuen Haushalt</button>
+	</div>
+</template>
+
+<template name="_createModal">
+	{{#ionModal title="Neuer Haushalt"}}
+		<div class="padding">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco</p>
+			<div class="list">
+				<form>
+					<label class="item item-input">
+						<i class="icon ion-home placeholder-icon"></i>
+						<input id="name" type="text" placeholder="Name des Haushalts">
+					</label>
+					<label class="item item-input">
+						<i class="icon ion-locked placeholder-icon"></i>
+						<input id="secret" type="text" placeholder="Geheimwort">
+					</label>
+					<button class="button button-block button-balanced">Erstellen</button>
+				</form>
+			</div>
+		</div>
+	{{/ionModal}}
+</template>
+
+
+<template name="enterExistingHousehold">
+	<div style='text-align: center'>
+		<button class="button button-large button-dark" data-ion-modal="_enterModal">Trete einem Haushalt bei</button>
+	</div>
+</template>
+
+<template name="_enterModal">
+	{{#ionModal title="Haushalt beitreten"}}
+		<div class="padding">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco</p>
+			<div class="list">
+				<form>
+					<label class="item item-input">
+						<i class="icon ion-home placeholder-icon"></i>
+						<input id="name" type="text" placeholder="Name des Haushalts">
+					</label>
+					<label class="item item-input">
+						<i class="icon ion-locked placeholder-icon"></i>
+						<input id="secret" type="text" placeholder="Geheimwort">
+					</label>
+					<button class="button button-block button-balanced">Beitreten</button>
+				</form>
+			</div>
+		</div>
+	{{/ionModal}}
+</template>
+
+
