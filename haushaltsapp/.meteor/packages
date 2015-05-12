@@ -8,9 +8,11 @@ meteor-platform
 insecure
 msavin:mongol
 iron:router
-accounts-password
 meteoric:ionic
 fourseven:scss
 meteoric:ionic-sass
 meteoric:ionicons-sass
-accounts-ui
+useraccounts:core
+useraccounts:ionic
+accounts-password
+softwarerero:accounts-t9n

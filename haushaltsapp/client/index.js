@@ -9,7 +9,7 @@ Template._createModal.events({
 			createHousehold(name, secret);
 			$('#name').val('');
 			$('#secret').val('');
-			alert('Household with name '+ name + 'and secret '+ secret + 'has been created.');
+			IonPopup.alert({title:'Yes! ', template: 'Household with name '+ name + ' and secret '+ secret + ' has been created.'});
 			IonModal.close();
 		}
 	}
@@ -25,12 +25,12 @@ Template._enterModal.events({
 		} else {
 			Meteor.call('householdValidation', name, secret, function(error, result){
 				if(result){
-					alert('success');
+					IonPopup.alert({title:'Yes! ', template: 'Household found'});
 					IonModal.close();
 					enterHousehold(result);
 				}
 				else{
-					alert('not found.');
+					IonPopup.alert({title:'Nope!', template: 'Household not found'});
 				}
 			});
 		}

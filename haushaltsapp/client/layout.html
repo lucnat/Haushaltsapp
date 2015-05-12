@@ -12,17 +12,21 @@
 			<h1 class="title">Haushaltsapp</h1>
 		{{/contentFor}}
 
-		{{#contentFor "headerButtonRight"}}
-			<i class="icon icon-clear">{{> loginButtons}}</i>
-		{{/contentFor}}
-
 		{{#ionContent class="padding"}}
 			{{#if currentUser}}
 				{{> yield}}
 			{{else}}
-				{{> account}}
+				{{> hello}}
 			{{/if}}
 		{{/ionContent}}
+
+		{{#if currentUser}}
+			{{#ionTabs style="ios"}}
+				{{> ionTab title="Einkaufsliste" path="shoppingList" iconOff="ios-bolt-outline" iconOn="ios-list-outline" class="tab-item-positive"}}
+				{{> ionTab title="Haushalt" path="household" iconOff="ios-clock-outline" iconOn="home" class="tab-item-positive"}}
+				{{> ionTab title="Profil" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}}
+			{{/ionTabs}}
+		{{/if}}
 
 	{{/ionBody}}
 </template>

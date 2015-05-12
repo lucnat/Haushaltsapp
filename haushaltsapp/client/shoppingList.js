@@ -25,19 +25,18 @@ Template.shoppingList.helpers({
 })
 
 Template.shoppingList.events({
-	'click #add': function(){
-		var produkt = {
-			name: $('#newItem').val(),
-			amount: '',
-			checked: false,
-			added: new Date(),
+	'submit form, click #addButon': function(event){
+		event.preventDefault();
+		if($('#newItem').val().length > 1){
+			var produkt = {
+				name: $('#newItem').val(),
+				amount: '',
+				checked: false,
+				added: new Date(),
+			}
+			addToShoppingList(produkt);
+			$('#newItem').val('');
 		}
-		addToShoppingList(produkt);
-		IonPopup.alert({
-			title: 'Success',
-			template: 'Added ',
-		});
-		$('#newItem').val('');
 	}
 });
 

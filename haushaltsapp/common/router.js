@@ -4,5 +4,6 @@ Router.configure({
 
 Router.route('/', {name: 'shoppingList'});
 
-Router.route('/account', {name: 'account'});
+Router.route('/profile', {name: 'profile'});
+Router.route('/household', {name: 'household'});
 

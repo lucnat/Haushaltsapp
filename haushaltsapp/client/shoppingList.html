@@ -2,19 +2,19 @@
 <template name="shoppingList">
 
 	{{#contentFor "headerTitle"}}
-  		<h1 class="title">{{household.name}}</h1>
+  		<h1 class="title">Einkaufsliste</h1>
 	{{/contentFor}}
 
 	{{#if household}}
-	<h2>Einkaufsliste</h2>
-
-	<div class="item item-input-inset">
-		<label class="item-input-wrapper item item-input">
-			<i class="icon ion-plus placeholder-icon"></i>
-			<input id='newItem' type="text" placeholder="Füge etwas hinzu...">
-		</label>
-		<button id='add' class="button">Submit</button>
-	</div>
+		<form id='add'>
+			<div class="item item-input-inset">
+				<label class="item-input-wrapper item item-input">
+					<i class="icon ion-plus placeholder-icon"></i>
+					<input id='newItem' type="text" placeholder="Füge etwas hinzu...">
+				</label>
+				<input id='addButton' type='submit' value='Add' class="button button-balanced">
+			</div>
+		</form>
 	{{else}}
 		<br><div style='text-align: center'><h2>Willkommen.</h2></div>
 		{{> createHousehold}}<br>
