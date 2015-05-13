@@ -1,4 +1,15 @@
 
+<template name="firstLogin">
+	{{#if currentUser.profile.myHousehold}}
+		{{> household}}
+	{{else}}
+		<br><div style='text-align: center'><h2>Willkommen.</h2></div>
+		{{> createHousehold}}<br>
+		<div style='text-align: center'><h2>oder</h2></div><br>
+		{{> enterExistingHousehold}}
+	{{/if}}
+</template>
+
 
 <template name="createHousehold">
 	<br>

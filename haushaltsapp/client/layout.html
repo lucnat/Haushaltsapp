@@ -20,7 +20,7 @@
 			{{/if}}
 		{{/ionContent}}
 
-		{{#if currentUser}}
+		{{#if currentUser.profile}}
 			{{#ionTabs style="ios"}}
 				{{> ionTab title="Einkaufsliste" path="shoppingList" iconOff="ios-list-outline" iconOn="ios-list-outline" class="tab-item-positive"}}
 				{{> ionTab title="Haushalt" path="household" iconOff="home" iconOn="home" class="tab-item-positive"}}

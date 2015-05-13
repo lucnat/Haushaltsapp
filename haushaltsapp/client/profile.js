@@ -1,5 +1,7 @@
 Template.profile.events({
 	'click button': function(){
-		Meteor.logout();
+		Meteor.logout(function(){
+			Router.go('/');
+		});
 	}
-})
+});

@@ -37,6 +37,17 @@ Template.shoppingList.events({
 			addToShoppingList(produkt);
 			$('#newItem').val('');
 		}
+	},
+	'click #clear-list': function(){
+		IonPopup.confirm({
+			title: 'Really?',
+			template: 'Are you <strong>really</strong> sure?',
+			onOk: function() {
+				var householdID = Households.findOne()._id
+				Households.update({'_id': householdID }, {$set: {'shoppingList': [] }})
+			},
+		});
+
 	}
 });
 

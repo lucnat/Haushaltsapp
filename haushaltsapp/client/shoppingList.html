@@ -15,16 +15,18 @@
 				<input id='addButton' type='submit' value='Add' class="button button-balanced">
 			</div>
 		</form>
-	{{else}}
-		<br><div style='text-align: center'><h2>Willkommen.</h2></div>
-		{{> createHousehold}}<br>
-		<div style='text-align: center'><h2>oder</h2></div><br>
-		{{> enterExistingHousehold}}
 	{{/if}}
 	{{#ionList}}
+
 		{{#each household.shoppingList}}
 			{{> listItem}}
 		{{/each}}
+
+		<br>
+		<button id='clear-list' class="button button-assertive">
+			Einkaufsliste leeren
+		</button>
+
 	{{/ionList}}
 
 </template>

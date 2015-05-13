@@ -1,5 +1,18 @@
 
 <template name="hello">
+	{{#if currentUser}}
+		{{#if myHousehold}}
+			{{> shoppingList}}
+		{{else}}
+			{{> firstLogin}}
+		{{/if}}
+	{{else}}
+		{{> login}}
+	{{/if}}
+</template>
+
+
+<template name='login'>
 	<br>
 	<div style='text-align: center'>
 		<h1>Hallo. <br><br> Bitte anmelden oder registrieren. </h1> <br><br>

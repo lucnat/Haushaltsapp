@@ -1,3 +1,11 @@
+Template.firstLogin.rendered = function(){
+	try{
+		if(Meteor.user().profile.myHousehold){
+			Router.go('/household');
+		}
+	} catch(e) {};
+}
+
 Template._createModal.events({
 	'submit form': function(event){
 		event.preventDefault();
@@ -56,6 +64,7 @@ enterHousehold = function(householdID){
 	// aktueller user tritt dem Haushalt mit der ID householdID bei
 	Meteor.users.update({_id: Meteor.user()._id}, { $set: {profile: {myHousehold: householdID} } });
 	Households.update({_id: Meteor.user().profile.myHousehold }, { $push: {members: Meteor.user()._id }});
+	Router.go('/shoppinglist');
 }
 
 addToShoppingList = function(produkt){
