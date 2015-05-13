@@ -2,4 +2,30 @@
 	{{#contentFor "headerTitle"}}
   		<h1 class="title">Haushalt</h1>
 	{{/contentFor}}
+
+
+	<div class="list">
+		<h2>Allgemein </h2>
+		<div class="item item-icon-left" href="#">
+			<i class="icon ion-home"></i>
+			{{household.name}}
+			<span class="item-note">Name</span>
+
+		</div>
+		<div class="item item-icon-left" href="#">
+			<i class="icon ion-locked"></i>
+			{{household.secret}}
+			<span class="item-note">Secret</span>
+		</div>
+		<h2>Mitglieder</h2>
+		
+		{{#each members}}
+			<div class="item item-icon-left" href="#">
+				<i class="icon ion-android-person"></i>
+				{{username}}
+				<span class="item-note">{{emails.[0].address}}</span>
+			</div>
+		{{/each}}
+	</div>
+
 </template>

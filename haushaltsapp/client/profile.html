@@ -4,11 +4,17 @@
   		<h1 class="title">Profil</h1>
 	{{/contentFor}}
 
-	{{#contentFor "headerButtonLeft"}}
+	{{#contentFor "headerButtonRight"}}
 		<button class="button button-clear pull-right">
 			{{> atNavButton}}
 		</button>
 	{{/contentFor}}
 
-	{{> atForm}}
+	<div style='text-align: center'>
+		<br> <br><br>
+		<h3>{{currentUser.username}}</h3>
+		<h4>{{currentUser.emails.[0].address}}</h4>
+		<br><br><br>
+		<button class='button button-assertive'>Abmelden</button>
+	</div>
 </template>

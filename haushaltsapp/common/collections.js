@@ -1,4 +1,5 @@
-Households = new Mongo.Collection('households');
+Households 	= new Mongo.Collection('households');
+Users 		= Meteor.users;
 
 /*
 
